@@ -58,12 +58,12 @@ const styles = StyleSheet.create({
     },
     inputMail: {
         width: PixelRatio.getPixelSizeForLayoutSize(26/4),
-        height: PixelRatio.getPixelSizeForLayoutSize(20/4)
+        height: PixelRatio.getPixelSizeForLayoutSize(20/4),
+        margin: PixelRatio.getPixelSizeForLayoutSize(40/4)
     },
     userName: {
         height: PixelRatio.getPixelSizeForLayoutSize(92/4),
         backgroundColor: '#004672',
-        margin: PixelRatio.getPixelSizeForLayoutSize(40/4)
     }
 });
 
