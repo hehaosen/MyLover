@@ -25,6 +25,10 @@ export default class Login extends Component {
                             <Image style={styles.inputMail}
                                    source={require('./src/images/login/mail.png')}/>
                         </View>
+                        <View style={styles.userName}>
+                            <Image style={styles.inputMail}
+                                   source={require('./src/images/login/password.png')}/>
+                        </View>
                     </View>
                 </Image>
 
@@ -48,7 +52,7 @@ const styles = StyleSheet.create({
         width: PixelRatio.getPixelSizeForLayoutSize(611/4),
         height: PixelRatio.getPixelSizeForLayoutSize(273/4),
         marginTop: PixelRatio.getPixelSizeForLayoutSize(100/4),
-        backgroundColor: '#666666'
+        backgroundColor: 'rgba(39, 94, 219, 0.8)'
     },
     bg: {
         resizeMode: Image.resizeMode.cover,
@@ -61,9 +65,13 @@ const styles = StyleSheet.create({
         height: PixelRatio.getPixelSizeForLayoutSize(20/4),
         margin: PixelRatio.getPixelSizeForLayoutSize(40/4)
     },
+    passWordMail: {
+        width: PixelRatio.getPixelSizeForLayoutSize(26/4),
+        height: PixelRatio.getPixelSizeForLayoutSize(20/4),
+        margin: PixelRatio.getPixelSizeForLayoutSize(40/4)
+    },
     userName: {
         height: PixelRatio.getPixelSizeForLayoutSize(92/4),
-        backgroundColor: '#004672',
     }
 });
 
