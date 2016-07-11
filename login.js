@@ -52,7 +52,8 @@ const styles = StyleSheet.create({
         width: PixelRatio.getPixelSizeForLayoutSize(611/4),
         height: PixelRatio.getPixelSizeForLayoutSize(273/4),
         marginTop: PixelRatio.getPixelSizeForLayoutSize(100/4),
-        backgroundColor: 'rgba(39, 94, 219, 0.8)'
+        backgroundColor: 'rgba(39, 94, 219, 0.8)',
+        borderRadius: PixelRatio.getPixelSizeForLayoutSize(10/4)
     },
     bg: {
         resizeMode: Image.resizeMode.cover,
