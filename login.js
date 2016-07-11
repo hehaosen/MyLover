@@ -11,7 +11,8 @@ import {
     Text,
     View,
     PixelRatio,
-    Image
+    Image,
+    TouchableHighlight
 } from 'react-native';
 export default class Login extends Component {
     render() {
@@ -25,10 +26,15 @@ export default class Login extends Component {
                             <Image style={styles.inputMail}
                                    source={require('./src/images/login/mail.png')}/>
                         </View>
-                        <View style={styles.userName}>
+                        <View style={styles.passWord}>
                             <Image style={styles.inputPassWord}
                                    source={require('./src/images/login/password.png')}/>
                         </View>
+                        <TouchableHighlight style={styles.loginButton}
+                                            underlayColor='#99d9f4'
+                        >
+                            <Text style={styles.loginText}>Login</Text>
+                        </TouchableHighlight>
                     </View>
                 </Image>
 
@@ -59,7 +65,8 @@ const styles = StyleSheet.create({
             height: PixelRatio.getPixelSizeForLayoutSize(10/4)
         },
         shadowOpacity: 0.5,
-        shadowRadius: PixelRatio.getPixelSizeForLayoutSize(6/4)
+        shadowRadius: PixelRatio.getPixelSizeForLayoutSize(6/4),
+        overflow: 'hidden'
 
     },
     bg: {
@@ -79,7 +86,28 @@ const styles = StyleSheet.create({
         margin: PixelRatio.getPixelSizeForLayoutSize(40/4)
     },
     userName: {
+        width: PixelRatio.getPixelSizeForLayoutSize(611/4),
         height: PixelRatio.getPixelSizeForLayoutSize(92/4),
+        borderColor: '#2556c4',
+        borderBottomWidth: 1,
+        borderStyle: 'solid'
+    },
+    passWord: {
+        width: PixelRatio.getPixelSizeForLayoutSize(611/4),
+        height: PixelRatio.getPixelSizeForLayoutSize(92/4),
+        borderColor: '#5582e9',
+        borderTopWidth: 1,
+        borderStyle: 'solid'
+    },
+    loginButton: {
+        width: PixelRatio.getPixelSizeForLayoutSize(611/4),
+        height: PixelRatio.getPixelSizeForLayoutSize(92/4),
+        backgroundColor: '#14a6de',
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+    loginText: {
+        color: '#FFFFFF'
     }
 });
 
