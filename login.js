@@ -12,7 +12,8 @@ import {
     View,
     PixelRatio,
     Image,
-    TouchableHighlight
+    TouchableHighlight,
+    TextInput
 } from 'react-native';
 export default class Login extends Component {
     render() {
@@ -25,10 +26,19 @@ export default class Login extends Component {
                         <View style={styles.userName}>
                             <Image style={styles.inputMail}
                                    source={require('./src/images/login/mail.png')}/>
+                            <TextInput
+                                keyboardType='email-address'
+                                placeholder='请输入你的邮箱 例:username@gmail.com'
+                                style={styles.inputText}/>
                         </View>
                         <View style={styles.passWord}>
                             <Image style={styles.inputPassWord}
                                    source={require('./src/images/login/password.png')}/>
+                            <TextInput
+                                keyboardType='email-address'
+                                password={true}
+                                placeholder='请输入你的密码'
+                                style={styles.passWordText}/>
                         </View>
                         <TouchableHighlight style={styles.loginButton}
                                             underlayColor='#99d9f4'
@@ -90,14 +100,17 @@ const styles = StyleSheet.create({
         height: PixelRatio.getPixelSizeForLayoutSize(92/4),
         borderColor: '#2556c4',
         borderBottomWidth: 1,
-        borderStyle: 'solid'
+        borderStyle: 'solid',
+        flexDirection: 'row'
     },
     passWord: {
         width: PixelRatio.getPixelSizeForLayoutSize(611/4),
         height: PixelRatio.getPixelSizeForLayoutSize(92/4),
         borderColor: '#5582e9',
         borderTopWidth: 1,
-        borderStyle: 'solid'
+        borderStyle: 'solid',
+        flexDirection: 'row'
+
     },
     loginButton: {
         width: PixelRatio.getPixelSizeForLayoutSize(611/4),
@@ -107,7 +120,23 @@ const styles = StyleSheet.create({
         justifyContent: 'center'
     },
     loginText: {
+        fontSize: PixelRatio.getPixelSizeForLayoutSize(8),
         color: '#FFFFFF'
+    },
+    inputText: {
+        color: '#FFFFFF',
+        fontSize: PixelRatio.getPixelSizeForLayoutSize(8),
+        width: PixelRatio.getPixelSizeForLayoutSize(435/4),
+        height: PixelRatio.getPixelSizeForLayoutSize(35/4),
+        marginTop: PixelRatio.getPixelSizeForLayoutSize(36/4)
+    },
+    passWordText: {
+        color: '#FFFFFF',
+        fontSize: PixelRatio.getPixelSizeForLayoutSize(8),
+        width: PixelRatio.getPixelSizeForLayoutSize(435/4),
+        height: PixelRatio.getPixelSizeForLayoutSize(35/4),
+        marginTop: PixelRatio.getPixelSizeForLayoutSize(36/4),
+        marginLeft: PixelRatio.getPixelSizeForLayoutSize(8/4)
     }
 });
 
