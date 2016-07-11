@@ -26,7 +26,7 @@ export default class Login extends Component {
                                    source={require('./src/images/login/mail.png')}/>
                         </View>
                         <View style={styles.userName}>
-                            <Image style={styles.inputMail}
+                            <Image style={styles.inputPassWord}
                                    source={require('./src/images/login/password.png')}/>
                         </View>
                     </View>
@@ -53,7 +53,14 @@ const styles = StyleSheet.create({
         height: PixelRatio.getPixelSizeForLayoutSize(273/4),
         marginTop: PixelRatio.getPixelSizeForLayoutSize(100/4),
         backgroundColor: 'rgba(39, 94, 219, 0.8)',
-        borderRadius: PixelRatio.getPixelSizeForLayoutSize(10/4)
+        borderRadius: PixelRatio.getPixelSizeForLayoutSize(10/4),
+        shadowColor: '#000000',
+        shadowOffset: {
+            height: PixelRatio.getPixelSizeForLayoutSize(10/4)
+        },
+        shadowOpacity: 0.5,
+        shadowRadius: PixelRatio.getPixelSizeForLayoutSize(6/4)
+
     },
     bg: {
         resizeMode: Image.resizeMode.cover,
@@ -66,9 +73,9 @@ const styles = StyleSheet.create({
         height: PixelRatio.getPixelSizeForLayoutSize(20/4),
         margin: PixelRatio.getPixelSizeForLayoutSize(40/4)
     },
-    passWordMail: {
-        width: PixelRatio.getPixelSizeForLayoutSize(26/4),
-        height: PixelRatio.getPixelSizeForLayoutSize(20/4),
+    inputPassWord: {
+        width: PixelRatio.getPixelSizeForLayoutSize(17/4),
+        height: PixelRatio.getPixelSizeForLayoutSize(24/4),
         margin: PixelRatio.getPixelSizeForLayoutSize(40/4)
     },
     userName: {
