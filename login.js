@@ -76,7 +76,6 @@ const styles = StyleSheet.create({
         },
         shadowOpacity: 0.5,
         shadowRadius: PixelRatio.getPixelSizeForLayoutSize(6/4),
-        overflow: 'hidden'
 
     },
     bg: {
@@ -117,7 +116,9 @@ const styles = StyleSheet.create({
         height: PixelRatio.getPixelSizeForLayoutSize(92/4),
         backgroundColor: '#14a6de',
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        borderBottomLeftRadius: PixelRatio.getPixelSizeForLayoutSize(10/4),
+        borderBottomRightRadius: PixelRatio.getPixelSizeForLayoutSize(10/4)
     },
     loginText: {
         fontSize: PixelRatio.getPixelSizeForLayoutSize(8),
