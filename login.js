@@ -1,7 +1,7 @@
 /**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
+ * 登录界面组件
+ * https://github.com/hehaosen/Mylover
+ * @Tom-大力神
  */
 
 import React, { Component } from 'react';
@@ -55,7 +55,8 @@ export default class Login extends Component {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1
+        flex: 1,
+        alignItems: 'center'
     },
     title: {
         fontSize: PixelRatio.getPixelSizeForLayoutSize(32),
@@ -80,8 +81,8 @@ const styles = StyleSheet.create({
     },
     bg: {
         resizeMode: Image.resizeMode.cover,
-        width: PixelRatio.getPixelSizeForLayoutSize(650/4),
-        height: PixelRatio.getPixelSizeForLayoutSize(1320/4),
+        width: PixelRatio.getPixelSizeForLayoutSize(750/4),
+        height: PixelRatio.getPixelSizeForLayoutSize(1440/4),
         alignItems: 'center'
     },
     inputMail: {
