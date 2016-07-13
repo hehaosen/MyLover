@@ -46,6 +46,11 @@ export default class Login extends Component {
                             <Text style={styles.loginText}>Login</Text>
                         </TouchableHighlight>
                     </View>
+                    <View style={styles.orLine}>
+                        <View style={styles.line}></View>
+                        <Text style={styles.or}>or</Text>
+                        <View style={styles.line}></View>
+                    </View>
                 </Image>
 
             </View>
@@ -139,6 +144,28 @@ const styles = StyleSheet.create({
         height: PixelRatio.getPixelSizeForLayoutSize(35/4),
         marginTop: PixelRatio.getPixelSizeForLayoutSize(36/4),
         marginLeft: PixelRatio.getPixelSizeForLayoutSize(8/4)
+    },
+    orLine: {
+        width: PixelRatio.getPixelSizeForLayoutSize(611/4),
+        height: PixelRatio.getPixelSizeForLayoutSize(35/4),
+        flexDirection: 'row',
+        marginTop: PixelRatio.getPixelSizeForLayoutSize(45/4),
+        alignItems: 'center'
+
+    },
+    line: {
+        borderColor: '#FFFFFF',
+        borderTopWidth: 1,
+        borderStyle: 'solid',
+        flex:1
+    },
+    or: {
+        textAlign: 'center',
+        backgroundColor: 'rgba(0, 0, 0, 0.0)',
+        fontSize: PixelRatio.getPixelSizeForLayoutSize(8),
+        width: PixelRatio.getPixelSizeForLayoutSize(60/4),
+        height: PixelRatio.getPixelSizeForLayoutSize(40/4),
+        color: '#FFFFFF'
     }
 });
 
