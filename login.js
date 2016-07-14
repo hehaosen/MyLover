@@ -54,7 +54,7 @@ export default class Login extends Component {
                     <TouchableHighlight style={styles.otherLogin}
                                         underlayColor='#99d9f4'
                     >
-                        <Text style={styles.loginText}>微信 登陆</Text>
+                        <Text style={styles.loginText}>Google登陆</Text>
                     </TouchableHighlight>
                 </Image>
 
