@@ -51,6 +51,11 @@ export default class Login extends Component {
                         <Text style={styles.or}>or</Text>
                         <View style={styles.line}></View>
                     </View>
+                    <TouchableHighlight style={styles.otherLogin}
+                                        underlayColor='#99d9f4'
+                    >
+                        <Text style={styles.loginText}>微信 登陆</Text>
+                    </TouchableHighlight>
                 </Image>
 
             </View>
@@ -166,6 +171,14 @@ const styles = StyleSheet.create({
         width: PixelRatio.getPixelSizeForLayoutSize(60/4),
         height: PixelRatio.getPixelSizeForLayoutSize(40/4),
         color: '#FFFFFF'
+    },
+    otherLogin: {
+        width: PixelRatio.getPixelSizeForLayoutSize(611/4),
+        height: PixelRatio.getPixelSizeForLayoutSize(92/4),
+        backgroundColor: '#3b5998',
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderRadius: PixelRatio.getPixelSizeForLayoutSize(10/4),
     }
 });
 
