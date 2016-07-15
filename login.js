@@ -179,6 +179,14 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         borderRadius: PixelRatio.getPixelSizeForLayoutSize(10/4),
+        marginTop: PixelRatio.getPixelSizeForLayoutSize(50/4),
+        shadowColor: '#000000',
+        shadowOffset: {
+            height: PixelRatio.getPixelSizeForLayoutSize(10/4)
+        },
+        shadowOpacity: 0.5,
+        shadowRadius: PixelRatio.getPixelSizeForLayoutSize(6/4),
+
     }
 });
 
