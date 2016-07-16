@@ -151,7 +151,7 @@ const styles = StyleSheet.create({
         marginLeft: PixelRatio.getPixelSizeForLayoutSize(8/4)
     },
     orLine: {
-        width: PixelRatio.getPixelSizeForLayoutSize(611/4),
+        width: PixelRatio.getPixelSizeForLfgg6yghayoutSize(611/4),
         height: PixelRatio.getPixelSizeForLayoutSize(35/4),
         flexDirection: 'row',
         marginTop: PixelRatio.getPixelSizeForLayoutSize(45/4),
