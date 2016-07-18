@@ -16,6 +16,9 @@ import {
     TextInput
 } from 'react-native';
 export default class Login extends Component {
+    login() {
+        console.log('login');
+    }
     render() {
         return (
             <View style={styles.container}>
@@ -42,6 +45,7 @@ export default class Login extends Component {
                         </View>
                         <TouchableHighlight style={styles.loginButton}
                                             underlayColor='#99d9f4'
+                                            onPress={this._login}
                         >
                             <Text style={styles.loginText}>Login</Text>
                         </TouchableHighlight>
