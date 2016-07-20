@@ -9,16 +9,23 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
+  Navigator
 } from 'react-native';
 import Login from './Login';
 
 class MyLover extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Login></Login>
-      </View>
+        <Navigator
+        initialRoute={{ name: 'Login', component: Login }}
+        configureScene={(route) => {
+                return Navigator.SceneConfigs.VerticalDownSwipeJump;
+              }}
+        renderScene={(route, navigator) => {
+                let Component = route.component;
+                return <Component {...route.params} navigator={navigator} />
+              }} />
     );
   }
 }

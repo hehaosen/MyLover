@@ -13,14 +13,30 @@ import {
     PixelRatio,
     Image,
     TouchableHighlight,
-    TextInput
+    TextInput,
+    Navigator
 } from 'react-native';
+
+import Center from './Center';
+
+
 export default class Login extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {};
+    }
+
     login() {
-        this.props.navigator.push({
-            title: '用户中心',
-            component: Center
-        });
+        const { navigator } = this.props;
+        //为什么这里可以取得 props.navigator?请看上文:
+        //<Component {...route.params} navigator={navigator} />
+        //这里传递了navigator作为props
+        if(navigator) {
+            navigator.push({
+                name: 'Center',
+                component: Center,
+            })
+        }
     }
     render() {
         return (
