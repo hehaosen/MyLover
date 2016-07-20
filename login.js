@@ -17,7 +17,10 @@ import {
 } from 'react-native';
 export default class Login extends Component {
     login() {
-        console.log('login');
+        this.props.navigator.push({
+            title: '用户中心',
+            component: Center
+        });
     }
     render() {
         return (
@@ -45,7 +48,7 @@ export default class Login extends Component {
                         </View>
                         <TouchableHighlight style={styles.loginButton}
                                             underlayColor='#99d9f4'
-                                            onPress={this._login}
+                                            onPress={this.login.bind(this)}
                         >
                             <Text style={styles.loginText}>Login</Text>
                         </TouchableHighlight>
@@ -57,6 +60,7 @@ export default class Login extends Component {
                     </View>
                     <TouchableHighlight style={styles.otherLogin}
                                         underlayColor='#99d9f4'
+                                        onPress={this.login.bind(this)}
                     >
                         <Text style={styles.loginText}>Google登陆</Text>
                     </TouchableHighlight>
@@ -155,7 +159,7 @@ const styles = StyleSheet.create({
         marginLeft: PixelRatio.getPixelSizeForLayoutSize(8/4)
     },
     orLine: {
-        width: PixelRatio.getPixelSizeForLfgg6yghayoutSize(611/4),
+        width: PixelRatio.getPixelSizeForLayoutSize(611/4),
         height: PixelRatio.getPixelSizeForLayoutSize(35/4),
         flexDirection: 'row',
         marginTop: PixelRatio.getPixelSizeForLayoutSize(45/4),
