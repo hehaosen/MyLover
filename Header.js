@@ -17,9 +17,25 @@ import {
 } from 'react-native';
 
 export default class Header extends Component {
+    goBack() {
+
+    }
     render() {
         return (
-            <Text>我是头</Text>
+            <View>
+                <TouchableHighlight style={styles.otherLogin}
+                                    underlayColor='#99d9f4'
+                                    onPress={this.goBack.bind(this)}
+                >
+                    <Image style={styles.goBack}
+                           source={require('./src/images/public/back.png')}/>
+                </TouchableHighlight>
+            </View>
         );
     }
 }
+const styles = StyleSheet.create({
+    container:{
+        flex: 1
+    }
+});

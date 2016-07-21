@@ -15,11 +15,15 @@ import {
     TouchableHighlight,
     TextInput
 } from 'react-native';
+import Header from './Header';
 
 export default class Center extends Component {
     render() {
         return (
+            <View>
+                <Header></Header>
                 <Text>我是用户中心</Text>
+            </View>
         );
     }
 }
