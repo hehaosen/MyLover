@@ -23,19 +23,19 @@ export default class Header extends Component {
     render() {
         return (
             <View>
-                <TouchableHighlight style={styles.otherLogin}
-                                    underlayColor='#99d9f4'
-                                    onPress={this.goBack.bind(this)}
-                >
-                    <Image style={styles.goBack}
-                           source={require('./src/images/public/back.png')}/>
-                </TouchableHighlight>
+
             </View>
         );
     }
 }
 const styles = StyleSheet.create({
-    container:{
+    container: {
         flex: 1
+    },
+    goBack: {
+        width: PixelRatio.getPixelSizeForLayoutSize(24/4),
+        height: PixelRatio.getPixelSizeForLayoutSize(41/4),
+        marginTop: 25
     }
+
 });
