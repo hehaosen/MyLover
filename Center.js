@@ -32,7 +32,7 @@ export default class Center extends Component {
     render() {
         return (
             <View>
-                <View>
+                <View style={styles.header}>
                     <TouchableHighlight style={styles.otherLogin}
                                         underlayColor='#99d9f4'
                                         onPress={this.goBack.bind(this)}
@@ -40,8 +40,8 @@ export default class Center extends Component {
                         <Image style={styles.goBack}
                                source={require('./src/images/public/back.png')}/>
                     </TouchableHighlight>
+                    <Text style={styles.footMark}>我的足迹</Text>
                 </View>
-                <Text>我是用户中心</Text>
             </View>
         );
     }
@@ -50,7 +50,15 @@ const styles = StyleSheet.create({
     goBack: {
         width: PixelRatio.getPixelSizeForLayoutSize(24/4),
         height: PixelRatio.getPixelSizeForLayoutSize(41/4),
-        marginTop: 25
+        marginLeft: PixelRatio.getPixelSizeForLayoutSize(35/4)
+    },
+    header: {
+        flexDirection: 'row',
+        marginTop: 25,
+        alignItems: 'center',
+        justifyContent: 'space-between'
+    },
+    footMark: {
+        marginRight: PixelRatio.getPixelSizeForLayoutSize(35/4)
     }
-
 });
