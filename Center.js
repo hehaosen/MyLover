@@ -42,6 +42,9 @@ export default class Center extends Component {
                     </TouchableHighlight>
                     <Text style={styles.footMark}>我的足迹</Text>
                 </View>
+                <View>
+
+                </View>
             </View>
         );
     }
