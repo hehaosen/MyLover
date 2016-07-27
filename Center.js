@@ -46,10 +46,10 @@ export default class Center extends Component {
                 </View>
 
                 <View style={styles.portrait}>
-                    <Image style={styles.goBack}
-                           source={require('./src/images/public/back.png')}/>
+                    <Image style={styles.portraitImg}
+                        source={require('./src/images/center/portrait.png')}/>
                 </View>
-                <View>
+                <View style={styles.information}>
 
                 </View>
             </View>
@@ -59,7 +59,7 @@ export default class Center extends Component {
 const styles = StyleSheet.create({
     main: {
         position:'relative',
-        alignItems: 'center',
+        alignItems: 'center'
 
     },
     goBack: {
@@ -84,11 +84,23 @@ const styles = StyleSheet.create({
         resizeMode: Image.resizeMode.cover,
         position: 'absolute'
     },
-    portrait:{
+    portrait: {
         width: PixelRatio.getPixelSizeForLayoutSize(245/4),
         height: PixelRatio.getPixelSizeForLayoutSize(245/4),
         borderColor: '#FFFFFF',
         borderWidth: 3,
         borderStyle: 'solid',
+        borderRadius: PixelRatio.getPixelSizeForLayoutSize(245/4),
+        alignItems: 'center',
+        overflow: 'hidden',
+        top: PixelRatio.getPixelSizeForLayoutSize(270/4)
+
+    },
+    portraitImg: {
+        width: PixelRatio.getPixelSizeForLayoutSize(527/4),
+        height: PixelRatio.getPixelSizeForLayoutSize(296/4)
+    },
+    information: {
+        backgroundColor: '#2688d5'
     }
 });
