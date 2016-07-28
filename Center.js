@@ -32,6 +32,9 @@ export default class Center extends Component {
     render() {
         return (
             <View style={styles.main}>
+                <View style={styles.information}>
+                    <Text style={}>阿道夫大沙发</Text>
+                </View>
                 <Image style={styles.headerBg}
                        source={require('./src/images/center/header-bg.png')}/>
                 <View style={styles.header}>
@@ -49,9 +52,7 @@ export default class Center extends Component {
                     <Image style={styles.portraitImg}
                         source={require('./src/images/center/portrait.png')}/>
                 </View>
-                <View style={styles.information}>
 
-                </View>
             </View>
         );
     }
@@ -79,7 +80,7 @@ const styles = StyleSheet.create({
     },
     headerBg: {
         width: PixelRatio.getPixelSizeForLayoutSize(750/4),
-        height: PixelRatio.getPixelSizeForLayoutSize(420/4),
+        height: PixelRatio.getPixelSizeForLayoutSize(400/4),
         left: -PixelRatio.getPixelSizeForLayoutSize(420/20),
         resizeMode: Image.resizeMode.cover,
         position: 'absolute'
@@ -93,7 +94,7 @@ const styles = StyleSheet.create({
         borderRadius: PixelRatio.getPixelSizeForLayoutSize(245/4),
         alignItems: 'center',
         overflow: 'hidden',
-        top: PixelRatio.getPixelSizeForLayoutSize(270/4)
+        top: PixelRatio.getPixelSizeForLayoutSize(250/4)
 
     },
     portraitImg: {
@@ -101,6 +102,10 @@ const styles = StyleSheet.create({
         height: PixelRatio.getPixelSizeForLayoutSize(296/4)
     },
     information: {
-        backgroundColor: '#2688d5'
+        backgroundColor: '#2688d5',
+        width: PixelRatio.getPixelSizeForLayoutSize(750/4),
+        top: PixelRatio.getPixelSizeForLayoutSize(400/4),
+        alignItems: 'center',
+        position: 'absolute'
     }
 });
