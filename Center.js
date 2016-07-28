@@ -33,7 +33,8 @@ export default class Center extends Component {
         return (
             <View style={styles.main}>
                 <View style={styles.information}>
-                    <Text style={}>阿道夫大沙发</Text>
+                    <Text style={styles.userName}>Markus Schulz</Text>
+                    <Text></Text>
                 </View>
                 <Image style={styles.headerBg}
                        source={require('./src/images/center/header-bg.png')}/>
@@ -103,9 +104,15 @@ const styles = StyleSheet.create({
     },
     information: {
         backgroundColor: '#2688d5',
-        width: PixelRatio.getPixelSizeForLayoutSize(750/4),
+        width: PixelRatio.getPixelSizeForLayoutSize(650/4),
+        height: PixelRatio.getPixelSizeForLayoutSize(750/4),
         top: PixelRatio.getPixelSizeForLayoutSize(400/4),
         alignItems: 'center',
         position: 'absolute'
+    },
+    userName: {
+        top: PixelRatio.getPixelSizeForLayoutSize(105/4),
+        fontSize: 20,
+        color: '#FFFFFF'
     }
 });
