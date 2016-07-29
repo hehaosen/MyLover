@@ -33,8 +33,12 @@ export default class Center extends Component {
         return (
             <View style={styles.main}>
                 <View style={styles.information}>
-                    <Text style={styles.userName}>Markus Schulz</Text>
-                    <Text></Text>
+                    <Text style={styles.userName}>大力神</Text>
+                    <View>
+                        <Image style={styles.headerBg}
+                               source={require('./src/images/center/flag.png')}/>
+                        <Text>浙江省 杭州市 西湖区</Text>
+                    </View>
                 </View>
                 <Image style={styles.headerBg}
                        source={require('./src/images/center/header-bg.png')}/>
