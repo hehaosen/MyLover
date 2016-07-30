@@ -34,8 +34,8 @@ export default class Center extends Component {
             <View style={styles.main}>
                 <View style={styles.information}>
                     <Text style={styles.userName}>大力神</Text>
-                    <View>
-                        <Image style={styles.headerBg}
+                    <View style={styles.address}>
+                        <Image style={styles.addressFlag}
                                source={require('./src/images/center/flag.png')}/>
                         <Text>浙江省 杭州市 西湖区</Text>
                     </View>
@@ -118,5 +118,14 @@ const styles = StyleSheet.create({
         top: PixelRatio.getPixelSizeForLayoutSize(105/4),
         fontSize: 20,
         color: '#FFFFFF'
+    },
+    addressFlag: {
+        width: PixelRatio.getPixelSizeForLayoutSize(18/4),
+        height: PixelRatio.getPixelSizeForLayoutSize(27/4)
+    },
+    address: {
+        top: PixelRatio.getPixelSizeForLayoutSize(125/4),
+        flexDirection: 'row',
+        alignItems: 'center'
     }
 });
