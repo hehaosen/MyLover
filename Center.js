@@ -37,7 +37,7 @@ export default class Center extends Component {
                     <View style={styles.address}>
                         <Image style={styles.addressFlag}
                                source={require('./src/images/center/flag.png')}/>
-                        <Text>浙江省 杭州市 西湖区</Text>
+                        <Text style={styles.addressFont}>浙江省 杭州市 西湖区</Text>
                     </View>
                 </View>
                 <Image style={styles.headerBg}
@@ -126,7 +126,10 @@ const styles = StyleSheet.create({
     address: {
         top: PixelRatio.getPixelSizeForLayoutSize(125/4),
         flexDirection: 'row',
-        alignItems: 'center',
-        color: '#FFFFFF'
+        alignItems: 'center'
+    },
+    addressFont: {
+        color: '#FFFFFF',
+        left: PixelRatio.getPixelSizeForLayoutSize(20/4)
     }
 });
