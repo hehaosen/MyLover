@@ -126,6 +126,7 @@ const styles = StyleSheet.create({
     address: {
         top: PixelRatio.getPixelSizeForLayoutSize(125/4),
         flexDirection: 'row',
-        alignItems: 'center'
+        alignItems: 'center',
+        color: '#FFFFFF'
     }
 });
