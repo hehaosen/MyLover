@@ -31,19 +31,9 @@ export default class Center extends Component {
     }
     render() {
         return (
-            <View style={styles.main}>
-                <View style={styles.information}>
-                    <Text style={styles.userName}>大力神</Text>
-                    <View style={styles.address}>
-                        <Image style={styles.addressFlag}
-                               source={require('./src/images/center/flag.png')}/>
-                        <Text style={styles.addressFont}>浙江省 杭州市 西湖区</Text>
-                    </View>
-                </View>
-                <Image style={styles.headerBg}
-                       source={require('./src/images/center/header-bg.png')}/>
+            <View style={styles.container}>
                 <View style={styles.header}>
-                    <TouchableHighlight style={styles.otherLogin}
+                    <TouchableHighlight style={styles.goBackLogin}
                                         underlayColor='#99d9f4'
                                         onPress={this.goBack.bind(this)}
                     >
@@ -52,6 +42,19 @@ export default class Center extends Component {
                     </TouchableHighlight>
                     <Text style={styles.footMark}>我的足迹</Text>
                 </View>
+                <Image style={styles.headerBg}
+                       source={require('./src/images/center/header-bg.png')}/>
+
+
+                <View style={styles.information}>
+                    <Text style={styles.userName}>大力神</Text>
+                    <View style={styles.address}>
+                        <Image style={styles.addressFlag}
+                               source={require('./src/images/center/flag.png')}/>
+                        <Text style={styles.addressFont}>浙江省 杭州市 西湖区</Text>
+                    </View>
+                </View>
+
 
                 <View style={styles.portrait}>
                     <Image style={styles.portraitImg}
@@ -63,32 +66,31 @@ export default class Center extends Component {
     }
 }
 const styles = StyleSheet.create({
-    main: {
-        position:'relative',
+    container: {
+        flex: 1,
         alignItems: 'center'
-
     },
     goBack: {
         width: PixelRatio.getPixelSizeForLayoutSize(24/4),
         height: PixelRatio.getPixelSizeForLayoutSize(41/4),
-        left: PixelRatio.getPixelSizeForLayoutSize(35/4)
     },
     header: {
         flexDirection: 'row',
         marginTop: 25,
-        position: 'absolute',
-        width:PixelRatio.getPixelSizeForLayoutSize(750/4)
+        flex: 1,
+        justifyContent: 'space-between',
+        justifyContent: 'center'
     },
     footMark: {
-        left: PixelRatio.getPixelSizeForLayoutSize(500/4),
-        color: '#0079ff'
+        color: '#0079ff',
+        width: PixelRatio.getPixelSizeForLayoutSize(175/4),
+        height: PixelRatio.getPixelSizeForLayoutSize(25/4)
     },
     headerBg: {
         width: PixelRatio.getPixelSizeForLayoutSize(750/4),
         height: PixelRatio.getPixelSizeForLayoutSize(400/4),
         left: -PixelRatio.getPixelSizeForLayoutSize(420/20),
         resizeMode: Image.resizeMode.cover,
-        position: 'absolute'
     },
     portrait: {
         width: PixelRatio.getPixelSizeForLayoutSize(245/4),
@@ -112,7 +114,6 @@ const styles = StyleSheet.create({
         height: PixelRatio.getPixelSizeForLayoutSize(750/4),
         top: PixelRatio.getPixelSizeForLayoutSize(400/4),
         alignItems: 'center',
-        position: 'absolute'
     },
     userName: {
         top: PixelRatio.getPixelSizeForLayoutSize(105/4),
@@ -131,5 +132,10 @@ const styles = StyleSheet.create({
     addressFont: {
         color: '#FFFFFF',
         left: PixelRatio.getPixelSizeForLayoutSize(20/4)
+    },
+    goBackLogin: {
+        flex: 1,
+        left: PixelRatio.getPixelSizeForLayoutSize(35/4),
+        backgroundColor: '#666666'
     }
 });
