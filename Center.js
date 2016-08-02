@@ -32,6 +32,9 @@ export default class Center extends Component {
     render() {
         return (
             <View style={styles.container}>
+                <Image style={styles.headerBg}
+                       source={require('./src/images/center/header-bg.png')}/>
+
                 <View style={styles.header}>
                     <TouchableHighlight style={styles.goBackLogin}
                                         underlayColor='#99d9f4'
@@ -42,10 +45,12 @@ export default class Center extends Component {
                     </TouchableHighlight>
                     <Text style={styles.footMark}>我的足迹</Text>
                 </View>
-                <Image style={styles.headerBg}
-                       source={require('./src/images/center/header-bg.png')}/>
 
 
+                <View style={styles.portrait}>
+                    <Image style={styles.portraitImg}
+                           source={require('./src/images/center/portrait.png')}/>
+                </View>
                 <View style={styles.information}>
                     <Text style={styles.userName}>大力神</Text>
                     <View style={styles.address}>
@@ -56,10 +61,6 @@ export default class Center extends Component {
                 </View>
 
 
-                <View style={styles.portrait}>
-                    <Image style={styles.portraitImg}
-                        source={require('./src/images/center/portrait.png')}/>
-                </View>
 
             </View>
         );
@@ -76,7 +77,7 @@ const styles = StyleSheet.create({
     },
     header: {
         flexDirection: 'row',
-        marginTop: 25,
+        marginTop: -PixelRatio.getPixelSizeForLayoutSize(650/4),
         flex: 1,
         justifyContent: 'space-between',
         justifyContent: 'center'
@@ -89,7 +90,7 @@ const styles = StyleSheet.create({
     headerBg: {
         width: PixelRatio.getPixelSizeForLayoutSize(750/4),
         height: PixelRatio.getPixelSizeForLayoutSize(400/4),
-        left: -PixelRatio.getPixelSizeForLayoutSize(420/20),
+        flex:1,
         resizeMode: Image.resizeMode.cover,
     },
     portrait: {
@@ -113,7 +114,7 @@ const styles = StyleSheet.create({
         width: PixelRatio.getPixelSizeForLayoutSize(650/4),
         height: PixelRatio.getPixelSizeForLayoutSize(750/4),
         top: PixelRatio.getPixelSizeForLayoutSize(400/4),
-        alignItems: 'center',
+        alignItems: 'center'
     },
     userName: {
         top: PixelRatio.getPixelSizeForLayoutSize(105/4),
@@ -135,7 +136,6 @@ const styles = StyleSheet.create({
     },
     goBackLogin: {
         flex: 1,
-        left: PixelRatio.getPixelSizeForLayoutSize(35/4),
-        backgroundColor: '#666666'
+        left: PixelRatio.getPixelSizeForLayoutSize(35/4)
     }
 });
